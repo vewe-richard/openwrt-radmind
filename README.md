@@ -27,8 +27,8 @@ mkdir -p my_packages/net/network/radmind
 git clone https://github.com/vewe-richard/openwrt-radmind.git
 cp openwrt-radmind/Makefile my_packages/net/network/radmind
 
-#Add 'src-link my_packages /home/user/openwrt/my_packages' to feeds.conf
-
+#Add 'src-link my_packages /home/me/Entware/my_packages' to feeds.conf
+make package/symlinks
 make menuconfig #select radmind
 make -j1 V=s package/radmind/compile
 ```
